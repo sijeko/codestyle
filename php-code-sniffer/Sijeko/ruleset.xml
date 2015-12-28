@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Sijeko">
+	<description>Sijeko Coding Standard</description>
+
+	<rule ref="PSR2">
+		<!-- Убираем отступы пробелами -->
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+		<exclude name="Generic.WhiteSpace.ScopeIndent"/>
+
+		<!-- Убираем отступы табами в объявлении функций -->
+		<exclude name="PSR2.Methods.FunctionCallSignature.Indent" />
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration" />
+
+		<!-- Убираем отступы табами в SWITCH -->
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.caseIndent" />
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.BreakIndent" />
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.defaultIndent" />
+	</rule>
+
+	<!-- Табы, не пробелы -->
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent" />
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="tabIndent" value="true"/>
+		</properties>
+	</rule>
+
+	<!-- Объявление функций и SWITCH с табами -->
+	<!--rule ref="Sijeko.Functions.FunctionDeclaration.Indent" />
+	<rule ref="Sijeko.ControlStructures.SwitchDeclarationTab" /-->
+
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="120"/>
+			<property name="absoluteLineLimit" value="150" />
+		</properties>
+	</rule>
+
+
+	<!-- Убираем файлы, где правила могут не соблюдаться -->
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>*/i18n/data/*</exclude-pattern>
+	<exclude-pattern>*/views/errorHandler/*</exclude-pattern>
+	<exclude-pattern>*/views/*</exclude-pattern>
+	<exclude-pattern>*/requirements/views/*</exclude-pattern>
+</ruleset>
