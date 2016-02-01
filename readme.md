@@ -165,7 +165,7 @@ class Controller
 	 */
 	protected function getModel($alias)
 	{
-		/* @var Document $model*/
+		/* @var Document $model */
 		$model = Document::find(['alias' => $alias]);
 		if ($model === null) {
 			throw new HttpException('404', 'Not Found');
