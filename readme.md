@@ -97,7 +97,7 @@
 	Node interpreter: /usr/bin/node  (свой путь до интерпретатора: nodejs, node.exe)
 	ESLint package: /usr/lib/node_modules/eslint  (свой путь до пакета eslint)
 	Configuration file: /home/username/project/codestyle/eslint/eslintrc.js  (свой путь к файлу)
-	Кнопка \[Aply\]
+	Кнопка [Aply]
 
 После этого:
 
