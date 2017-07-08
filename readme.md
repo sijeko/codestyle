@@ -76,42 +76,36 @@
 	Editor → Inspections → PHP → PHP Code Sniffer validation (поставить галочку)
 
 
-#### JsHint
+#### ESLint
 
-[JsHint](http://jshint.com/) ставится очень просто. Активируем его в настройках Идеи:
+[ESLint](http://eslint.org) — мощный инструмент для проверки яваскрипт-кода как на потенциальные ошибки программирования,
+так и на соответствие текста определённому стилю.
 
-	Languages & Frameworks → JavaScript → Code Quality Tools → JSHint
+Ставим NodeJS и NPM.
 
-Там галочки и путь к файлу:
+Ставим ESLint:
+
+	sudo npm install -g eslint
+
+Настраиваем инспекции в Идее (настройки среды по умолчанию):
+
+	File → Default Settings → Languages & Frameworks → JavaScript → Code Quality Tools → ESLint
+
+Там галочки и путь к файлу настроек:
 
 	Enable: Yes
-	Use config files: Yes
-	Custom configuration file: указываем путь к файлу `/home/username/.WebIde90/jshint-options.js`
+	Node interpreter: /usr/bin/node  (свой путь до интерпретатора: nodejs, node.exe)
+	ESLint package: /usr/lib/node_modules/eslint  (свой путь до пакета eslint)
+	Configuration file: /home/username/project/codestyle/eslint/eslintrc.js  (свой путь к файлу)
+	Кнопка \[Aply\]
 
 После этого:
 
-	Editor → Inspections → JavaScript → Code Quality Tools → JSHint (поставить галочку)
+	Editor → Inspections → JavaScript → Code Quality Tools → ESLint (поставить галочку)
 
-Больше никаких дополнительных действий выполнять не надо.
+После этого повторить эти же действия в настройках текущего проекта, если он был создан до настройки ESLint в Идее:
 
-
-#### JSCS
-
-Для работы [JSCS](https://github.com/jscs-dev/node-jscs) необходимо в операционную систему поставить интерпретатор NodeJS.
-
-…
-
-	Languages & Frameworks → JavaScript → Code Quality Tools → JSCS
-
-Там галочка и пути к интерпретатору и пакету JSCS:
-
-	Enable: Yes
-	Node interpreter: указываем команду или путь до интерпретатора node (nodejs, node.exe)
-	JSCS package: указываем путь до каталога с установленным пакетом JSCS
-
-После этого:
-
-	Editor → Inspections → JavaScript → Code Quality Tools → JSCS (поставить галочку)
+	File → Settings
 
 
 ### Встроенная документация для библиотек
