@@ -1,5 +1,9 @@
 .idea
+
 php-code-sniffer/vendor
 php-code-sniffer/composer.phar
 php-code-sniffer/composer.lock
 
+php-mess-detector/vendor
+php-mess-detector/composer.phar
+php-mess-detector/composer.lock
