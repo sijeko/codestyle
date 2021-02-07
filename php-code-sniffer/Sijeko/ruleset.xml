@@ -6,18 +6,9 @@
 		<!-- Убираем отступы пробелами -->
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 		<exclude name="Generic.WhiteSpace.ScopeIndent"/>
-
-		<!-- Убираем отступы табами в объявлении функций -->
-		<exclude name="PSR2.Methods.FunctionCallSignature.Indent" />
-		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration" />
-
-		<!-- Убираем отступы табами в SWITCH -->
-		<exclude name="PSR2.ControlStructures.SwitchDeclaration.caseIndent" />
-		<exclude name="PSR2.ControlStructures.SwitchDeclaration.BreakIndent" />
-		<exclude name="PSR2.ControlStructures.SwitchDeclaration.defaultIndent" />
 	</rule>
 
-	<!-- Табы, не пробелы -->
+	<!-- Tabs, not spaces -->
 	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent" />
 	<rule ref="Generic.WhiteSpace.ScopeIndent">
 		<properties>
@@ -43,4 +34,5 @@
 	<exclude-pattern>*/views/errorHandler/*</exclude-pattern>
 	<exclude-pattern>*/views/*</exclude-pattern>
 	<exclude-pattern>*/requirements/views/*</exclude-pattern>
+	<exclude-pattern>*.js</exclude-pattern>
 </ruleset>
