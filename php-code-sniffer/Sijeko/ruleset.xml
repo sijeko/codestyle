@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="Sijeko">
-	<description>Sijeko Coding Standard</description>
+	<description>Sijeko PHP Coding Standard</description>
 
-	<rule ref="PSR2">
+	<rule ref="PSR12">
 		<!-- Убираем отступы пробелами -->
 		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 		<exclude name="Generic.WhiteSpace.ScopeIndent"/>
@@ -27,12 +27,13 @@
 		</properties>
 	</rule>
 
+	<!-- Внутри шаблонов отключаем правило из-за альтернативного синтаксиса: if (): -->
+	<rule ref="Squiz.ControlStructures.ControlSignature.SpaceAfterCloseParenthesis">
+		<exclude-pattern>*/views/*</exclude-pattern>
+	</rule>
+
 
 	<!-- Убираем файлы, где правила могут не соблюдаться -->
 	<exclude-pattern>vendor/*</exclude-pattern>
-	<exclude-pattern>*/i18n/data/*</exclude-pattern>
-	<exclude-pattern>*/views/errorHandler/*</exclude-pattern>
-	<exclude-pattern>*/views/*</exclude-pattern>
-	<exclude-pattern>*/requirements/views/*</exclude-pattern>
 	<exclude-pattern>*.js</exclude-pattern>
 </ruleset>
