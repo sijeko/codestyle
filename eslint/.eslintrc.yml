@@ -1,0 +1,58 @@
+env:
+  browser: true
+  es2022: true
+  amd: true
+  #jquery: true
+extends:
+  - 'eslint:recommended'
+  #- 'plugin:vue/essential'
+  #- 'plugin:vue/strongly-recommended'
+  #- 'plugin:@typescript-eslint/recommended'
+  #- 'plugin:@typescript-eslint/recommended-requiring-type-checking'
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+  #Popper: readonly
+  #Vue: readonly
+  #axios: readonly
+  #_: readonly
+#parser: 'vue-eslint-parser'
+parserOptions:
+  #parser: '@typescript-eslint/parser'
+  ecmaVersion: 2022
+  sourceType: module
+  #plugins:
+  #- vue
+  #- '@typescript-eslint'
+rules:
+  indent:
+    - error
+    - tab
+    - SwitchCase: 1
+  no-mixed-spaces-and-tabs:
+    - error
+    - smart-tabs
+  linebreak-style:
+    - error
+    - unix
+  eol-last: error
+  curly: error
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+  semi:
+    - error
+    - always
+  max-len:
+    - warn
+    - code: 120
+  eqeqeq: error
+  space-before-function-paren:
+    - error
+    - named: never
+      anonymous: always
+      asyncArrow: always
+  consistent-return: error
+  no-unused-vars: warn
+  no-else-return: warn
